@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <img src="club-logo.png" alt="Club Logo" class="logo">
+            <h1>WELCOME!</h1>
+            <p>Sign in to access exclusive features</p>
+        </div>
+        
+        <form id="loginForm" class="login-form">
+            <div class="form-group">
+                <label for="email">Email or User ID</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="email" name="email" placeholder="Enter your email or user ID" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <i class="fas fa-eye toggle-password" onclick="togglePasswordVisibility()"></i>
+                </div>
+                <div class="forgot-password">
+                    <a href="#" id="forgotPassword">Forgot password?</a>
+                </div>
+            </div>
+            
+            <div class="form-group remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            
+            <button type="submit" class="login-button">Sign In</button>
+            
+            <div class="signup-link">
+               <a href="#" id="signup">Join the community</a>
+            </div>
+        </form>
+        
+        <div class="social-login">
+            <p>Or sign in with:</p>
+            <div class="social-icons">
+                <button class="social-button google">
+                    <i class="fab fa-google"></i>
+                </button>
+                <button class="social-button facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+                <button class="social-button apple">
+                    <i class="fab fa-apple"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Reset Password</h2>
+            <p>Enter your email to receive a password reset link</p>
+            <form id="resetPasswordForm">
+                <div class="form-group">
+                    <input type="email" id="resetEmail" placeholder="Your email address" required>
+                </div>
+                <button type="submit" class="reset-button">Send Reset Link</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
